@@ -6,13 +6,13 @@ import { checkGuess } from "../../game-helpers";
 function Guess({ guessList, answer }) {
   return (
     <div className="guess-results">
-      {range(NUM_OF_GUESSES_ALLOWED).map((_, rowIdx) => {
+      {range(NUM_OF_GUESSES_ALLOWED).map((rowIdx) => {
         const guess = guessList[rowIdx]?.guess;
         const guessStatus = checkGuess(guess, answer);
 
         return (
           <div className="guess" key={rowIdx}>
-            {range(5).map((_, colIdx) => {
+            {range(5).map((colIdx) => {
               const letterStatus = guessStatus && guessStatus[colIdx];
               return (
                 <div
