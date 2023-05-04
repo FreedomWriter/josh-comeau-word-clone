@@ -17,7 +17,8 @@ function GuessInput(props) {
         value={guess}
         onChange={(e) => setGuess(e.target.value.toUpperCase())}
         required
-        pattern="\w{5,5}"
+        pattern="[a-zA-Z]{5}"
+        title="5 letter word"
         disabled={disabled}
       />
     </form>
