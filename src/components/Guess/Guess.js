@@ -5,7 +5,7 @@ import { checkGuess } from "../../game-helpers";
 
 function Guess({ guessList, answer }) {
   return (
-    <div className="">
+    <div className="guess-results">
       {range(NUM_OF_GUESSES_ALLOWED).map((_, rowIdx) => {
         const guess = guessList[rowIdx]?.guess;
         const guessStatus = checkGuess(guess, answer);

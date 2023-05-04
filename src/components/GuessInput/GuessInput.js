@@ -5,7 +5,6 @@ function GuessInput(props) {
   const [guess, setGuess] = React.useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ guess });
     handleSubmitGuess(guess);
     setGuess("");
   };
