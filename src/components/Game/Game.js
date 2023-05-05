@@ -4,7 +4,7 @@ import { sample } from "../../utils";
 import { WORDS } from "../../data";
 import GuessInput from "../GuessInput/GuessInput";
 import GuessList from "../GuessList/GuessList";
-import Guess from "../Guess/Guess";
+import GuessGrid from "../GuessGrid/GuessGrid";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 
 // // Pick a random word on every pageload.
@@ -78,7 +78,7 @@ function Game() {
           <SadBanner answer={answer} handleReset={handleReset} />
         ))}
       <GuessList guessList={guessList} />
-      <Guess guessList={guessList} answer={answer} />
+      <GuessGrid guessList={guessList} answer={answer} />
       <GuessInput
         handleSubmitGuess={handleSubmitGuess}
         disabled={isGameOver()}
